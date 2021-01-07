@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/table_divider"
+        android:showDividers="beginning|middle|end"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/item_name" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_item_name"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/uom" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_uom"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/price" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_price"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

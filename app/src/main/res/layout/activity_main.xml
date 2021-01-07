@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.MainActivity">
+
+    <include layout="@layout/app_bar_main" />
+
+    <org.mmtextview.components.complex.MMNavigationView
+        android:id="@+id/nav_view"
+        style="@style/navigationViewStyle"
+        android:theme="@style/navigation_theme"
+        app:itemBackground="@drawable/nav_view_item_background"
+        app:itemIconPadding="10dp"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/menu_text_color"
+        app:menu="@menu/activity_main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:layout_weight="1"
+                android:hint="@string/barcode"
+                app:boxStrokeColor="@color/register_input_box_stroke">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_barcode"
+                    style="@style/TextInputEditTextStyle" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_scan"
+                style="@style/smallButtonStyle"
+                android:layout_weight="2"
+                android:text="@string/scan" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/item_code"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_item_code"
+                style="@style/TextInputEditTextStyle" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/item_name"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_item_name"
+                style="@style/TextInputEditTextStyle" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:hint="@string/quantity"
+                android:padding="5dp"
+                app:boxStrokeColor="@color/register_input_box_stroke">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_quantity"
+                    style="@style/TextInputEditTextStyle" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/uom"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner_uom"
+                    style="@style/SpinnerStyle"
+                    android:layout_margin="0dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/new_balance"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_balance"
+                style="@style/TextInputEditTextStyle"
+                android:inputType="textMultiLine" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/purchase_price"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_purchase_price"
+                style="@style/TextInputEditTextStyle"
+                android:inputType="textMultiLine" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/total_amount"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_total_amount"
+                style="@style/TextInputEditTextStyle"
+                android:inputType="textMultiLine" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/status" />
+
+        <RadioGroup
+            android:id="@+id/status_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_active"
+                style="@style/RadioStyle"
+                android:checked="true"
+                android:text="@string/active" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_inactive"
+                style="@style/RadioStyle"
+                android:text="@string/inactive" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sales"
+                style="@style/smallButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/save" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_close"
+                style="@style/smallButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/close" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

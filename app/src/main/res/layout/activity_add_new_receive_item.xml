@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.receive_items.AddNewReceiveItemActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_save">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.pos.widgets.MMTextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:hint="@string/receive_number"
+                app:boxStrokeColor="@color/register_input_box_stroke">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_receive_no"
+                    style="@style/TextInputEditTextStyle"
+                    android:cursorVisible="false"
+                    android:focusable="false" />
+
+            </com.example.pos.widgets.MMTextInputLayout>
+
+            <com.example.pos.widgets.MMTextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:hint="@string/distributor"
+                app:boxStrokeColor="@color/register_input_box_stroke">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_receiver_name"
+                    style="@style/TextInputEditTextStyle" />
+
+            </com.example.pos.widgets.MMTextInputLayout>
+
+            <org.mmtextview.components.MMTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/delivery_order_number"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_delivery_number"
+                style="@style/SpinnerStyle" />
+
+            <org.mmtextview.components.MMButton
+                android:id="@+id/btn_search"
+                style="@style/smallButtonStyle"
+                android:layout_marginBottom="10dp"
+                android:text="@string/search" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_no_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/no_items"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/no_items"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_total_commission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/no_items"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_total_tax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/no_items"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_new_receive_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <org.mmtextview.components.MMButton
+            android:id="@+id/btn_save"
+            style="@style/smallButtonStyle"
+            android:layout_weight="1"
+            android:text="@string/save" />
+
+        <org.mmtextview.components.MMButton
+            android:id="@+id/btn_cancel"
+            style="@style/smallButtonStyle"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+    </LinearLayout>
+</RelativeLayout>

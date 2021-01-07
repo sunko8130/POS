@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.search_categories.MainCategoriesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/main_category_name"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_main_category_name"
+            style="@style/SpinnerStyle" />
+
+        <org.mmtextview.components.MMButton
+            android:id="@+id/btn_search"
+            style="@style/smallButtonStyle"
+            android:layout_marginBottom="10dp"
+            android:text="@string/search" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_total_main_category_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:textSize="18sp"
+            android:visibility="gone"
+            tools:text="Total" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

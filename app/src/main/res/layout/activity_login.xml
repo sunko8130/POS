@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/image"
+            android:src="@drawable/ic_account_circle_24dp" />
+
+        <com.example.pos.widgets.MMTextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/login_name"
+            android:textColorHint="@color/md_white_1000"
+            app:boxStrokeColor="@color/text_input_box_stroke"
+            app:hintTextColor="@color/md_white_1000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_login_name"
+                style="@style/TextInputEditTextStyle"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/md_white_1000" />
+        </com.example.pos.widgets.MMTextInputLayout>
+
+        <com.example.pos.widgets.MMTextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/password"
+            android:textColorHint="@color/md_white_1000"
+            app:boxStrokeColor="@color/text_input_box_stroke"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/md_blue_800"
+            app:hintTextColor="@color/md_white_1000"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                style="@style/TextInputEditTextStyle"
+                android:focusable="true"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/md_white_1000" />
+
+        </com.example.pos.widgets.MMTextInputLayout>
+
+        <org.mmtextview.components.MMButton
+            android:id="@+id/btn_login"
+            style="@style/ContinueButtonStyle"
+            android:layout_marginTop="20dp"
+            android:text="@string/login" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:text="@string/forgot_password"
+            android:textAlignment="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="17sp"
+            android:textStyle="italic|bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

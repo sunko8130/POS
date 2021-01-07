@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.receive_items.AddReceiveOrderItemActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/receive_number"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_receive_no"
+                style="@style/TextInputEditTextStyle" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/receive_date" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_receive_date"
+            style="@style/ImageButtonStyle"
+            android:drawableEnd="@drawable/ic_date_range_24dp"
+            android:hint="@string/from_date"
+            android:singleLine="true"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/distributor"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_distributor"
+            style="@style/SpinnerStyle" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/payment_terms"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_payment_terms"
+            style="@style/SpinnerStyle" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/total_amount"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_total_amount"
+                style="@style/TextInputEditTextStyle" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/remark"
+            app:boxStrokeColor="@color/register_input_box_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_remark"
+                style="@style/TextInputEditTextStyle"
+                android:inputType="textMultiLine" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/payment_status" />
+
+        <RadioGroup
+            android:id="@+id/status_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_pending"
+                style="@style/RadioStyle"
+                android:checked="true"
+                android:text="@string/pending" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_paid"
+                style="@style/RadioStyle"
+                android:text="@string/paid" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sales"
+                style="@style/smallButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/save" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_sales_item"
+                style="@style/smallButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/add_item" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

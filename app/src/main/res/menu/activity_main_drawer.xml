@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home" />
+    <!--    <item-->
+    <!--        android:id="@+id/nav_new_vendor"-->
+    <!--        android:icon="@drawable/ic_fiber_new_black_24dp"-->
+    <!--        android:title="@string/nav_vendor" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/nav_new_purchase"-->
+    <!--        android:icon="@drawable/ic_fiber_new_black_24dp"-->
+    <!--        android:title="@string/nav_purchase" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/nav_vendor_list"-->
+    <!--        android:icon="@drawable/ic_playlist_add_black_24dp"-->
+    <!--        android:title="@string/nav_vendor_list" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/nav_purchase_list"-->
+    <!--        android:icon="@drawable/ic_playlist_add_black_24dp"-->
+    <!--        android:title="@string/nav_purchase_list" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/nav_purchase_report"-->
+    <!--        android:icon="@drawable/ic_attachment_black_24dp"-->
+    <!--        android:title="@string/purchase_report" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/nav_change_password"-->
+    <!--        android:icon="@drawable/ic_vpn_key_black_24dp"-->
+    <!--        android:title="@string/change_password" />-->
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/logout"
+        android:title="@string/logout" />
+
+</menu>

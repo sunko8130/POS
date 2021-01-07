@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.receive_items.AddNewReceiveItemActivity" />
+        <activity android:name=".ui.pricing.PricingActivity">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".ui.sales.AddSalesActivity" />
+        <activity android:name=".ui.payment.AddNewPaymentActivity" />
+        <activity android:name=".ui.payment.PaymentActivity" />
+        <activity android:name=".ui.receive_items.AddReceiveOrderItemActivity" />
+        <activity android:name=".ui.stock_balance.StockBalanceActivity" />
+        <activity android:name=".ui.sales.SalesOrdersActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".ui.sales.SalesActivity" />
+        <activity android:name=".ui.items.ItemsActivity" />
+        <activity android:name=".ui.category.CategorySearchActivity" />
+        <activity android:name=".ui.search_categories.MainCategoriesActivity" />
+        <activity android:name=".ui.receive_items.ReceiveItemViewActivity" />
+        <activity android:name=".ui.receive_items.ReceiveItemsActivity" />
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>

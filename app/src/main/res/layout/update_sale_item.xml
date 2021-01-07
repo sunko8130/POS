@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/image"
+        android:scaleType="fitXY"
+        android:src="@drawable/delete" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_delete"
+        android:divider="@drawable/table_divider"
+        android:showDividers="beginning|middle|end"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/item_name" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_item_name"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/number_of_items" />
+
+            <EditText
+                android:id="@+id/tv_no_of_items"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:inputType="number"
+                android:padding="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/uom" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_uom"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/price" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_price"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/commission_table_row"
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end"
+            android:visibility="gone">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/com_per" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_commission"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMTextView
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="@string/cost" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_cost"
+                style="@style/textViewStyle"
+                android:layout_span="2"
+                android:layout_weight="1"
+                tools:text="textView" />
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_divider"
+            android:showDividers="beginning|middle|end">
+
+            <org.mmtextview.components.MMButton
+                android:id="@+id/btn_update_qty"
+                style="@style/smallButtonStyle"
+                android:layout_span="4"
+                android:layout_weight="2"
+                android:text="@string/update" />
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

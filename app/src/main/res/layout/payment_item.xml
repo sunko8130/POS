@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:cardBackgroundColor="@color/md_blue_grey_100"
+        app:cardCornerRadius="2dp">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showDividers="middle"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <org.mmtextview.components.MMTextView
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    android:text="@string/payment_no" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_payment_no"
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    tool:text="textView" />
+            </TableRow>
+
+            <TableRow>
+
+                <org.mmtextview.components.MMTextView
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    android:text="@string/delivery_order_number" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_delivery_order_no"
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    tool:text="textView" />
+            </TableRow>
+
+            <TableRow>
+
+                <org.mmtextview.components.MMTextView
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    android:text="@string/total_amount" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_total_amount"
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    tool:text="textView" />
+            </TableRow>
+
+            <TableRow>
+
+                <org.mmtextview.components.MMTextView
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    android:text="@string/payment" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_payment_amount"
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    tool:text="textView" />
+            </TableRow>
+
+            <TableRow>
+
+                <org.mmtextview.components.MMTextView
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    android:text="@string/bal_to_paid" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_bal_to_paid"
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    tool:text="textView" />
+            </TableRow>
+
+            <TableRow>
+
+                <org.mmtextview.components.MMTextView
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    android:text="@string/payment_date" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_payment_date"
+                    style="@style/textViewStyle"
+                    android:layout_span="2"
+                    tool:text="textView" />
+            </TableRow>
+
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
